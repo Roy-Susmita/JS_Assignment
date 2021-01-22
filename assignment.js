@@ -2,7 +2,7 @@
 // Problem 1-kilometerToMeter
 function kilometerToMeter(kiloMeter) {
     if (kiloMeter < 0) {
-        return "KiloMeter can not be negative";
+        return "Distance can not be negative";
     }
     else {
         var Meter = 1000 * kiloMeter;
