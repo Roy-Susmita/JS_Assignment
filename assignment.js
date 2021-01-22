@@ -29,32 +29,32 @@ function budgetCalculator(watch, mobile, laptop) {
 
 // Problem 3-hotelCost
 function hotelCost(stayingDays) {
-    var Cost = 0;
+    var totalCost = 0;
     if (stayingDays < 0) {
         return "Day can not be negative";
     }
     else if (stayingDays <= 10) {
-        var Cost = stayingDays * 100;
+        totalCost = stayingDays * 100;
     }
     else if (stayingDays <= 20) {
         var firstTenDays = 10 * 100;
         var daysRemain = stayingDays - 10;
         var secondTenDays = daysRemain * 80;
-        Cost = firstTenDays + secondTenDays;
+        totalCost = firstTenDays + secondTenDays;
     }
     else {
         var firstTenDays = 10 * 100;
         var secondTenDays = 10 * 80;
         var daysRemain = stayingDays - 20;
         var restDays = daysRemain * 50;
-        Cost = firstTenDays + secondTenDays + restDays;
+        totalCost = firstTenDays + secondTenDays + restDays;
 
     }
-    return Cost;
+    return totalCost;
 }
 
-//var totalcost = hotelCost(41);
-//console.log(totalcost);
+//var cost = hotelCost(41);
+// console.log(cost);
 
 // Problem 4-megaFriend
 function megaFriend(friendsName) {
@@ -66,12 +66,11 @@ function megaFriend(friendsName) {
         for (var i = 0; i < friendsName.length; i++) {
             if (friendsName[i].length > nameLength) {
                 nameLength = friendsName[i].length;
-                var longestName = friendsName[i];
+                var megaName = friendsName[i];
             }
         }
     }
-    return longestName;
-
+    return megaName;
 }
 //var Name = megaFriend(["Susmi", "Susmita", "Lee min ho", "park shin hye"]);
 //console.log(Name);
